@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Technical Documentation Project</title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <nav  id="navbar">
+        <header>HTML Basic Structure</header>
+        <ol>
+          <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+          <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
+          <li><a href="#html" class="nav-link">html</a></li>
+          <li><a href="#head" class="nav-link">head</a></li>
+          <li><a href="#body" class="nav-link">body</a></li>
+          <li><a href="#header" class="nav-link">header</a></li>
+          <li><a href="#div" class="nav-link">div</a></li>
+          <li><a href="#p" class="nav-link">p</a></li>
+          <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
+          <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
+        </ol>
+</nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <p>This technical documentation aims to be an introduction to the most basic HTML elements that fulfill a webpage, aiming users that are newbies to web design and development.</p>
+          <p>We'll approach here the HTML elements with code examples:</p>
+          <ul>
+            <li>!DOCTYPE</li>
+            <li>html</li>
+            <li>head</li>
+            <li>body</li>
+            <li>header</li>
+            <li>div</li>
+            <li>p</li>
+          </ul>
+          </section>
+        <section class="main-section" id="!DOCTYPE">
+          <header>!DOCTYPE</header>
+          <p>In HTML, the <strong  class="large-bold">doctype</strong> declaration is a crucial component that must be included at the very beginning of every HTML document. This declaration, formatted as , serves a specific purpose: it instructs the web browser on how to interpret and render the document correctly. By including this declaration, developers can prevent the browser from entering "quirks mode," a rendering mode that may lead to inconsistencies in how web pages are displayed across different browsers.<!doctype html></p>
+          <p>The doctype declaration is not case-sensitive, meaning it can be written in various formats. While the convention in many coding examples, such as those found on MDN, is to use lowercase letters ( ), it is also acceptable to write it as .<!doctype html></p>
+          <p>The importance of the doctype cannot be overstated. It ensures that the browser adheres to current web standards, which enhances the overall rendering process. Without a proper doctype, browsers might interpret HTML documents unpredictably, potentially causing layout and functionality issues. Therefore, including the correct doctype is essential for achieving a consistent and reliable user experience across different platforms.</p>
+          <p>In summary, the doctype declaration is not merely a formal requirement; it is foundational for web development. By ensuring that browsers understand the version of HTML being used, it helps maintain compatibility and performance in web applications. </p>
+          <h2>Code example:</h2>
+          <code>&lt;!doctype html&gt;</code>
+            <code>&lt;!DOCTYPE html&gt;</code>
+          </section>
+        <section class="main-section" id="html">
+          <header>html</header>
+          <p><strong  class="large-bold">HTML</strong>, which stands for HyperText Markup Language , is the fundamental building block of the World Wide Web. It serves to define both the meaning and structure of web content, allowing for the organization and presentation of information on web pages. While HTML is essential for structuring content, it is often complemented by other technologies that enhance the visual appearance and interactivity of web pages. </p>
+          <p>Specifically, Cascading Style Sheets (CSS) are typically utilized to dictate the presentation of a webpage, while JavaScript is employed to add dynamic functionality and behavior.</p>
+<p>The term "hypertext" refers to the system of links that connect web pages, enabling navigation within a single website or across multiple sites. These links are a vital aspect of the web's architecture. By sharing content online and creating connections to other pages, individuals actively participate in the broader ecosystem known as the World Wide Web.</p>
+<p>HTML uses a system of "markup" to annotate various types of content, including text, images, and multimedia elements, for display in web browsers. This markup consists of special elements that define different sections of a webpage, such as , , , , , , , , and many others. Each element plays a specific role in conveying information and organizing content effectively.</p>
+<p>In summary, HTML is not only a technical language but also a means through which users can engage with and contribute to the vast landscape of information available on the internet. Its role in facilitating connections through hyperlinks underscores its significance in fostering communication and collaboration among users worldwide.</p>
+<h2>Code example</h2>
+<code>&lt;html&gt;</code>
+<code>&lt;/html&gt;</code>
+          </section>
+          <br>
+        <section class="main-section" id="head">
+          <header>head</header>
+          <p>The <strong  class="large-bold">head</strong> section of an HTML document is a crucial component that is not visible in the web browser when the page is loaded. This section contains important information that helps define the document and its presentation. Among the elements typically found in the head are the page's title , which appears in the browser's title bar or tab, as well as links to Cascading Style Sheets (CSS) , should you choose to apply styles to your HTML content.</p>
+<p>Additionally, the head may include links to custom favicons , which are small icons representing the website, and various types of metadata . This metadata provides contextual information about the HTML document, such as the author's name and relevant keywords that describe the content.</p>
+<p>Web browsers utilize the information contained within the head section to render the HTML document accurately and efficiently. By ensuring that this section is well-structured and informative, developers can enhance both the functionality and accessibility of their web pages.</p>
+<h2>Code example</h2>
+<code>&lt;head&gt;</code>
+<code>&lt;/head&gt;</code>
+          </section>
+          <br>
+          <section class="main-section" id="body">
+          <header>body</header>
+          <p>The <strong  class="large-bold">body</strong> element in an HTML document serves as the primary container for all the content that is displayed to users in a web browser. This includes a wide variety of elements such as text, images, videos, links, and interactive components. Essentially, the body encapsulates everything that users interact with when they visit a webpage, making it a critical part of the document's structure.</p>
+<p>It is important to note that there can only be one element within a single HTML document. This singularity ensures clarity and organization in how content is presented. Within the , developers can utilize various HTML elements to create a rich and engaging user experience. For example, headings ( to ), paragraphs ( ), lists ( , ), and multimedia elements ( , ) can all be included to enhance the presentation and functionality of the webpage.</p>
+<p>Furthermore, the element can also incorporate attributes that influence its appearance and behavior. For instance, styles can be applied directly through inline CSS or by linking to external stylesheets, allowing for customization of fonts, colors, layouts, and more.</p>
+<p>In summary, the element is fundamental to web development as it houses all visible content and user interactions on a webpage. By thoughtfully structuring the content within this element, developers can create informative and visually appealing experiences for users.</p>
+<h2>Code example:</h2>
+<code>&lt;body&gt;</code>
+<code>&lt;/body&gt;</code>
+          </section>
+          <br>
+          <section class="main-section" id="header">
+          <header>header</header>
+          <p>The <strong  class="large-bold">header</strong> element in HTML is designed to encapsulate introductory content, serving as a key component of a webpage's structure. Typically, the header contains a variety of elements that provide context and navigation aids for users.</p>
+<p>Furthermore, the header may include additional elements such as the author's name or publication date, which can provide valuable context for the content presented on the page. Other navigational aids, such as menus or links to different sections of the site, are often incorporated into this element to enhance usability and guide users through their browsing experience.</p>
+<p>It is worth noting that while the header is commonly used at the top of a webpage, it can also be employed within other sections of an HTML document, such as within articles or sections. This versatility allows for consistent presentation and organization of introductory content throughout different parts of a website.</p>
+<p> In summary, the header element plays a vital role in establishing both context and navigation for users. By thoughtfully incorporating various elements within this section, web developers can create an engaging and user-friendly experience that effectively communicates key information and facilitates easy navigation.</p>
+<h2>Code example:</h2>
+<code>&lt;header&gt;</code>
+<code>&lt;/header&gt;</code>
+          </section>
+          <br>
+          <section class="main-section" id="div">
+          <header>div</header>
+          <p>The <strong  class="large-bold">div</strong> element in HTML serves as a generic container for flow content, making it a versatile tool in web development. This element does not inherently influence the content or layout of a webpage until it is styled using Cascading Style Sheets (CSS). For instance, developers can apply styles directly to itself or utilize layout models such as Flexbox or Grid on its parent elements to achieve the desired visual arrangement.</p>
+<p>As a "pure" container, the element does not carry any semantic meaning on its own. Its primary function is to group related content together, which facilitates easier styling and manipulation. By assigning class or id attributes to a , developers can target specific sections of a document for styling purposes, enabling a more organized and visually appealing presentation.</p>
+<p>Additionally, the element can be used to mark sections of a document that may require special handling, such as indicating that the content within is written in a different language. This can be accomplished by using the attribute, which enhances accessibility and ensures that screen readers and other assistive technologies interpret the content correctly.</p>
+<p>In summary, while the element does not impose any inherent structure or meaning, it plays a crucial role in organizing and styling web content. Its flexibility allows developers to create well-structured layouts and enhance the overall user experience. Thank you for your attention to this topic; your engagement is highly appreciated.</p>
+<h2>Code example</h2>
+<code>&lt;div&gt;</code>
+<code>&lt;/div&gt;</code>
+          </section>
+          <br>
+          <section class="main-section" id="p">
+          <header>p</header>
+          <p>The <strong  class="large-bold">p</strong> HTML element is fundamental in structuring written content on a webpage, representing a paragraph . In visual media, paragraphs are typically displayed as blocks of text that are separated from adjacent blocks by blank lines and may also feature first-line indentation. This formatting not only enhances readability but also helps convey distinct ideas or topics within the text.</p>
+<p>In HTML, the element is defined by the syntax of an opening tag followed by the content of the paragraph and a closing tag. This straightforward structure allows developers to encapsulate related content effectively. While paragraphs are most commonly composed of text, they can also include other elements such as images, links, or form fields, thereby providing flexibility in how information is presented.</p>
+<p>As a block-level element, the tag begins on a new line and typically occupies the full width of its containing element. This characteristic ensures that each paragraph is visually distinct from others, aiding in the organization of content. By default, web browsers automatically apply vertical spacing before and after paragraphs, further enhancing their separation and clarity.</p>
+<p>Furthermore, the element plays an important role in accessibility. By breaking content into manageable paragraphs, developers improve the reading experience for all users, including those using assistive technologies. Clear paragraphing allows screen readers to convey information more effectively, making it easier for users to follow along with the content.</p>
+<p>It is also worth noting that while paragraphs are primarily textual, they can contain phrasing content —elements that can be part of a sentence. For instance, you can include inline elements like for emphasis or for hyperlinks within a paragraph. This capability allows for rich content presentation while maintaining semantic structure.</p>
+<p>In summary, the element is essential for creating well-structured and accessible web pages. By using this element thoughtfully, developers can ensure that their content is not only visually appealing but also easy to navigate and understand.</p>
+<h2>Code example:</h2>
+<code>&lt;p&gt;</code>
+<code>&lt;/p&gt;</code>
+          </section>
+          <br>
+          <section class="main-section" id="Final_Thoughts">
+          <header>Final Thoughts</header>
+          <p>We've discussed the main basic HTML elements that provides structure to an html web page.</p>
+          <p>We hope this technical documentation could be a quick start for novices in webdesign and development.</p>
+          </section>
+          <section class="main-section" id="Further_Reference">
+          <header>Further Reference</header>
+          <p><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Documentation</a></p>
+          </section>
+        </main>
+        <footer>
+        Made with <i class="fas fa-heart heart"></i> by Vitorio Paulo for FreeCodeCamp
+    </footer>
+      </body>
+      </html>
