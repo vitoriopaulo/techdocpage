@@ -52,6 +52,7 @@ body {
 
 .section-header {
     color: greenyellow; /* Set section header color to green */
+    font-size: 2rem; /* Set appropriate font size for section headers */
 }
 
 .section-list {
@@ -110,6 +111,18 @@ footer {
     color: red;
 }
 
+/* Hamburger menu styles for mobile experience */
+.hamburger-menu {
+   display:none; /* Hidden by default */ 
+   cursor:pointer; 
+   color: greenyellow; /* Color of the hamburger icon */
+   font-size: 2rem; /* Size of the hamburger icon */
+   position: fixed; /* Keep it fixed at top right corner */ 
+   top: 10px; 
+   right: 10px; 
+   z-index: 1001; /* Ensure it is above other content */ 
+}
+
 /* Responsive design adjustments for mobile devices */
 @media (max-width: 768px) { 
    #navbar {
@@ -133,5 +146,9 @@ footer {
 
    .nav-link:last-child { 
        margin-bottom: 0; /* Remove extra space after last menu item */ 
+   }
+
+   .hamburger-menu { 
+       display:block; /* Show hamburger icon on mobile */ 
    }
 }
