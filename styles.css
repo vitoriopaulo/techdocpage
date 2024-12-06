@@ -1,76 +1,137 @@
 body {
     background-color: black;
     overflow: auto;
-    font-family: raleway, serif;
-  }
-  
-  nav li a {
-      color: inherit;          text-decoration: none;   
-      cursor: default;        
-  }
-  
-  .nav-link {
-    font-family: raleway, serif;
-  }
-  
-  .main-section {
-    font-family: raleway, serif;
-  }
-  
-  p {
+    font-family: 'Raleway', serif;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Ensure vertical alignment */
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+#navbar {
+    width: 250px; /* Fixed width for navigation */
+    padding: 20px;
+    position: fixed; /* Fix the navbar to the left */
+    height: 100%; /* Full height */
+    background-color: black; /* Background color */
+}
+
+#navbar header {
+    color: greenyellow; /* Header color */
+}
+
+#navbar ol {
+    padding-left: 0; /* Remove default padding */
+}
+
+#navbar li {
+    list-style-type: none; /* Remove bullet points */
+}
+
+.nav-link {
+    color: greenyellow; /* Set link color to green */
+    text-decoration: none; /* Remove underline from links */
+    margin-bottom: 15px; /* Add space between menu items for better readability */
+    font-size: 1.2rem; /* Improved font size for readability */
+}
+
+.nav-link:hover {
+   color: lightgreen; /* Change hover color */
+   text-decoration: underline; /* Underline on hover */
+}
+
+#main-doc {
+    margin-left: 270px; /* Space for fixed navbar */
+    padding: 20px;
+    flex-grow: 1; /* Allow main content to grow and fill space */
+}
+
+/* Ensure all sections are displayed sequentially and aligned vertically */
+.main-section {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.section-header {
+    color: greenyellow; /* Set section header color to green */
+}
+
+.section-list {
+    color: white; /* Ensure list text is visible */
+}
+
+.section-list li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: greenyellow;
+}
+
+p {
     color: #ffffff;
     padding: 1rem;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 12.5%; /* Set left margin for better readability on mobile */
+    margin-right: 12.5%; /* Set right margin for better readability on mobile */
     text-align: left;
     line-height: 1.5;
-  }
-  
-  .large-bold {
-              font-weight: bold;   
-              font-size: 18px;     
-          }
-  
-  h2{
-    font-family: raleway, serif;
-    color: green;
-  }
-  
-  code {
-  font-family: raleway, serif;
-  color: #ffffff;
-  }
-  
-  header {
-    color: green;
-    font-size: 2rem;
+}
+
+.large-bold {
     font-weight: bold;
-  }
-  
-  li {
+    font-size: 18px;
+}
+
+h2 {
+    font-family: 'Raleway', serif;
+    color: green; /* Ensure h2 headers are also green */
+}
+
+code {
+    font-family: 'Raleway', serif;
     color: #ffffff;
-  }
-  
-  a {
-    color: inherit;          
-    text-decoration: none;   
-    cursor: default;  
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  .heart {
-  color: red;
-  }
-  
-  @media (min-width: 480px) and (max-width:  1200px)  {
-   body {
-     color:black;
-     font-family: raleway; serif;
+}
+
+/* Center footer text below sections and ensure it is at the bottom of the page */
+footer {
+   text-align: center; 
+   padding: 20px;
+   font-size: 16px;
+   color: #ffffff;
+   position: relative; 
+   bottom: 0; 
+   width: calc(100% - 40px); 
+}
+
+/* Heart icon color in footer */
+.heart {
+    color: red;
+}
+
+/* Responsive design adjustments for mobile devices */
+@media (max-width: 768px) { 
+   #navbar {
+       width: 100%; /* Full width on mobile */
+       position: absolute; /* Overlay navigation */
+       top: 0; /* Stick to top */
+       left: 0; /* Align to left */
+       z-index: 1000; /* Ensure it is above other content */
    }
-  }
+
+   #main-doc {
+       margin-left: 0; /* Remove left margin on mobile to utilize full width */ 
+       padding-left: 5%; /* Adjust padding for mobile experience */ 
+       padding-right: 5%; 
+       margin-top: 60px; /* Space below navbar on mobile devices */ 
+   }
+
+   .main-section {
+       margin-bottom: 20px; /* Reduce space between sections on mobile if needed */ 
+   }
+
+   .nav-link:last-child { 
+       margin-bottom: 0; /* Remove extra space after last menu item */ 
+   }
+}
