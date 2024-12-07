@@ -13,6 +13,7 @@ body {
     position: fixed; /* Fix the navbar to the left */
     height: 100%; /* Full height */
     background-color: black; /* Background color */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 #navbar header {
@@ -127,7 +128,7 @@ footer {
 @media (max-width: 768px) { 
    #navbar {
        width: 100%; /* Full width on mobile */
-       position: absolute; /* Overlay navigation */
+       position: absolute; /* Overlay navigation when modal is open */
        top: 0; /* Stick to top */
        left: 0; /* Align to left */
        z-index: 1000; /* Ensure it is above other content */

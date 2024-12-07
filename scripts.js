@@ -24,10 +24,24 @@ window.onclick = function(event) {
     }
 }
 
-// Close modal when a link is clicked
+// Close modal when a link is clicked and prevent default behavior
 var navLinks = document.querySelectorAll("#navbar .nav-link");
 navLinks.forEach(function(link) {
-    link.onclick = function() {
-        modal.style.display = "none"; // Close the modal
+    link.onclick = function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var targetId = this.getAttribute('href'); // Get target section ID
+        var targetSection = document.querySelector(targetId); // Find target section
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
+        }
+        
+        // Close the modal only if it's open (for mobile view)
+        if (modal.style.display === "block") { 
+            modal.style.display = "none"; // Close the modal
+        }
+        
+        // Ensure navbar remains visible in desktop mode
+        // No need to hide the navbar here, as it should stay fixed.
     };
 });
