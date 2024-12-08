@@ -25,6 +25,12 @@ modal {
     opacity: 1;
 }
 
+/* Modal when shown */
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
 #navbar {
     width: 250px; /* Fixed width for navigation */
     padding: 20px;
@@ -60,6 +66,19 @@ modal {
 .nav-link:hover {
     color: lightgreen;
     text-decoration: underline;
+}
+
+/* Mobile navigation when opened */
+#navbar.open {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    padding: 60px 20px 20px;
 }
 
 /* Default styles for larger screens */
@@ -142,12 +161,11 @@ footer {
    z-index: 1001; /* Ensure it is above other content */ 
 }
 
-/* Responsive design adjustments for mobile devices */
+/* Replace your current @media query with this */
 @media (max-width: 768px) {
-    /* Force hide the left navigation and any associated icons */
+    /* Force hide the left navigation by default */
     #navbar {
-        display: none !important;
-        visibility: hidden !important; /* Extra protection against visibility */
+        display: none;
     }
     
     /* Main content adjustments */
@@ -158,34 +176,35 @@ footer {
         width: 100%;
     }
     
-    /* Ensure content is aligned vertically */
-    .main-section {
+    /* Modal styling */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        display: block;
-        margin: 20px 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 1500;
     }
-    
-    /* Adjust image size with margins */
-    img {
-        width: 90%; /* Slightly smaller than viewport */
-        height: auto;
+
+    .modal.show {
         display: block;
-        margin: 15px auto; /* Center the image */
-        max-width: 600px; /* Prevent excessive stretching */
     }
-    
-    /* Fix code blocks display */
-    code {
+
+    .modal.show #navbar {
         display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        background-color: #333;
-        color: white;
-        padding: 15px;
-        margin: 15px 0;
-        overflow-x: auto;
+        height: 100%;
+        padding: 60px 20px 20px;
+        background-color: black;
+        z-index: 1600;
     }
     
-    /* Clean hamburger menu */
+    /* Hamburger menu */
     .hamburger-menu {
         display: block;
         position: fixed;
@@ -196,27 +215,18 @@ footer {
         font-size: 2rem;
         background: none;
         border: none;
+        cursor: pointer;
     }
     
-    /* Force remove any unwanted icons/elements */
-    .modal,
-    .modal *,
-    #navbar *,
-    .modal::before,
-    .modal::after,
-    #navbar::before,
-    #navbar::after {
-        display: none !important;
-        visibility: hidden !important;
+    /* Other mobile styles */
+    img {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 15px auto;
+        max-width: 600px;
     }
     
-    /* Show only when explicitly opened */
-    .modal.show {
-        display: block !important;
-        visibility: visible !important;
-    }
-    
-    /* Section header fixes */
     .section-header, 
     header {
         display: block;
@@ -224,7 +234,6 @@ footer {
         margin: 15px 0;
     }
     
-    /* Paragraph alignment */
     p {
         width: 100%;
         display: block;
