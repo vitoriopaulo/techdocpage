@@ -2,46 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Technical Documentation Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Fundamentals: Technical Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger-menu" id="hamburger" aria-label="Open Navigation Menu" role="button" tabindex="0">
-        &#9776; <!-- Unicode character for the hamburger icon -->
-    </div>
+    <!-- Accessible Hamburger Menu -->
+    <button 
+        class="hamburger-menu" 
+        id="hamburger" 
+        aria-label="Toggle Navigation Menu" 
+        aria-expanded="false" 
+        aria-controls="navbar"
+    >
+        &#9776;
+    </button>
     
-    <!-- Modal Structure -->
+    <!-- Navigation Modal -->
     <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
-            <span class="close" aria-label="Close Navigation">&times;</span>
+            <button 
+                class="close" 
+                aria-label="Close Navigation Menu"
+            >&times;</button>
+            
             <nav id="navbar">
                 <header id="modal-title">HTML Basic Structure</header>
                 <ol>
                     <li><a href="#Introduction" class="nav-link">Introduction</a></li>
                     <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
-             <li><a href="#html" class="nav-link">html</a></li>
-             <li><a href="#head" class="nav-link">head</a></li>
-             <li><a href="#body" class="nav-link">body</a></li>
-             <li><a href="#header" class="nav-link">header</a></li>
-             <li><a href="#div" class="nav-link">div</a></li>
-             <li><a href="#p" class="nav-link">p</a></li>
-             <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
-             <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
+                    <li><a href="#html" class="nav-link">html</a></li>
+                    <li><a href="#head" class="nav-link">head</a></li>
+                    <li><a href="#body" class="nav-link">body</a></li>
+                    <li><a href="#header" class="nav-link">header</a></li>
+                    <li><a href="#div" class="nav-link">div</a></li>
+                    <li><a href="#p" class="nav-link">p</a></li>
+                    <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
+                    <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
                 </ol>
             </nav>
         </div>
     </div>
 
     <main id="main-doc" role="main">
+        <!-- Your existing section content remains the same -->
         <section class="main-section" id="Introduction">
             <header class="section-header">Introduction</header>
-            <p>This technical documentation aims to be an introduction to the most basic HTML elements that fulfill a webpage, aiming users that are newbies to web design and development.</p>
-            <p>We'll approach here the HTML elements with code examples:</p>
-            <img src="images/html_structure.jpg">
+            <p>This technical documentation aims to be an introduction to the most basic HTML elements that fulfill a webpage, targeting newcomers to web design and development.</p>
+            <p>We'll explore HTML elements with code examples:</p>
+            <img src="images/html_structure.jpg" alt="HTML Structure Overview">
             <ul class="section-list">
                 <li>!DOCTYPE</li>
                 <li>html</li>
@@ -139,17 +149,14 @@
 
         <section class="main-section" id="Further_Reference">
             <header class="section-header">Further Reference</header>
-            <p><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Documentation</a></p>
+            <p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">Mozilla Documentation</a></p>
         </section>
-
     </main>
 
-    <!-- Footer Section -->
     <footer role="contentinfo">
-        Made with <i class="fas fa-heart heart"></i> by Vitorio Paulo for FreeCodeCamp
+        Made with <span class="heart">❤️</span> by Vitorio Paulo for FreeCodeCamp
     </footer>
     
-    <!-- Link to JavaScript file -->
     <script src="scripts.js"></script>
 </body>
 </html>

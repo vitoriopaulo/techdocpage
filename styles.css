@@ -144,42 +144,91 @@ footer {
 
 /* Responsive design adjustments for mobile devices */
 @media (max-width: 768px) {
-    #myModal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.5);
+    /* Force hide the left navigation and any associated icons */
+    #navbar {
+        display: none !important;
+        visibility: hidden !important; /* Extra protection against visibility */
     }
-
-    ##navbar {
-        position: fixed;
-        top: 0;
-        left: -250px; /* Hide navbar off-screen by default */
-        height: 100%;
-        width: 250px;
-        overflow-y: auto;
-        transition: left 0.3s ease; /* Smooth transition for sliding */
-    }
-
-    #navbar.open {
-        left: 0; /* Slide in when open class is added */
-    }
-
+    
+    /* Main content adjustments */
     #main-doc {
-        margin-left: 0; /* Remove left margin on mobile */
-        padding-left: 5%;
-        padding-right: 5%;
-        max-width: 100%; /* Full width on mobile */
+        margin-left: 0 !important;
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
     }
-
+    
+    /* Ensure content is aligned vertically */
+    .main-section {
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+    }
+    
+    /* Adjust image size with margins */
+    img {
+        width: 90%; /* Slightly smaller than viewport */
+        height: auto;
+        display: block;
+        margin: 15px auto; /* Center the image */
+        max-width: 600px; /* Prevent excessive stretching */
+    }
+    
+    /* Fix code blocks display */
+    code {
+        display: block;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        margin: 15px 0;
+        overflow-x: auto;
+    }
+    
+    /* Clean hamburger menu */
     .hamburger-menu {
-        display: block; /* Show hamburger icon on mobile */
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 2000;
+        color: greenyellow;
+        font-size: 2rem;
+        background: none;
+        border: none;
     }
-
-    .image {
-        width: 100%; /* Make images responsive to fit screen width */
-        height: auto; /* Maintain aspect ratio */
+    
+    /* Force remove any unwanted icons/elements */
+    .modal,
+    .modal *,
+    #navbar *,
+    .modal::before,
+    .modal::after,
+    #navbar::before,
+    #navbar::after {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Show only when explicitly opened */
+    .modal.show {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Section header fixes */
+    .section-header, 
+    header {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    /* Paragraph alignment */
+    p {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+        padding: 0;
     }
 }
