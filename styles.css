@@ -7,13 +7,34 @@ body {
     min-height: 100vh; /* Ensure body takes full height */
 }
 
+modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease;
+}
+
+.modal-open {
+    display: block;
+    opacity: 1;
+}
+
 #navbar {
     width: 250px; /* Fixed width for navigation */
     padding: 20px;
     position: fixed; /* Fix the navbar to the left */
+    left: 0; /* Explicitly set to the left edge of the viewport */
     height: 100%; /* Full height */
     background-color: black; /* Background color */
     z-index: 1000; /* Ensure it stays above other content */
+    top: 0; /* Align to the top of the viewport */
+    overflow-y: auto; /* Allow scrolling if content is too long */
 }
 
 #navbar header {
@@ -22,6 +43,7 @@ body {
 
 #navbar ol {
     padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 #navbar li {
@@ -29,21 +51,22 @@ body {
 }
 
 .nav-link {
-    color: greenyellow; /* Set link color to green */
-    text-decoration: none; /* Remove underline from links */
-    margin-bottom: 15px; /* Add space between menu items for better readability */
-    font-size: 1.2rem; /* Improved font size for readability */
+    display: block;
+    padding: 10px;
+    color: #00FF00; /* Green color */
+    text-decoration: none;
 }
 
 .nav-link:hover {
-   color: lightgreen; /* Change hover color */
-   text-decoration: underline; /* Underline on hover */
+    color: lightgreen;
+    text-decoration: underline;
 }
 
+/* Default styles for larger screens */
 #main-doc {
-    margin-left: 270px; /* Space for fixed navbar */
-    padding: 20px;
-    flex-grow: 1; /* Allow main content to grow and fill space */
+    margin-left: 250px;
+    padding: 30px;
+    max-width: calc(100% - 290px);
 }
 
 /* Ensure all sections are displayed sequentially and aligned vertically */
@@ -73,27 +96,22 @@ header {
 p {
     color: #ffffff;
     padding: 1rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 12.5%; /* Set left margin for better readability on mobile */
-    margin-right: 12.5%; /* Set right margin for better readability on mobile */
-    text-align: left;
-    line-height: 1.5;
 }
 
 .large-bold {
-    font-weight: bold;
-    font-size: 18px;
+   font-weight: bold;
 }
 
 h2 {
-    font-family: 'Raleway', serif;
-    color: green; /* Ensure h2 headers are also green */
+   font-family: 'Raleway', serif;
+   color: green; /* Ensure h2 headers are also green */
 }
 
 code {
-    font-family: 'Raleway', serif;
-    color: #ffffff;
+   display: block; /* Display code examples as block elements for better visibility */
+   background-color: #333; /* Dark background for code block */
+   color: #ffffff; /* White text for code block */
+   padding: 10px; /* Padding around code blocks */
 }
 
 /* Center footer text below sections and ensure it is at the bottom of the page */
@@ -109,14 +127,14 @@ footer {
 
 /* Heart icon color in footer */
 .heart {
-    color: red;
+   color: red;
 }
 
 /* Hamburger menu styles for mobile experience */
 .hamburger-menu {
    display:none; /* Hidden by default */ 
    cursor:pointer; 
-   color: greenyellow; /* Color of the hamburger icon */
+   color: greenyellow; /* Color of the hamburger icon (off-white)*/
    font-size: 2rem; /* Size of the hamburger icon */
    position: fixed; /* Keep it fixed at top right corner */ 
    top: 10px; 
@@ -125,31 +143,43 @@ footer {
 }
 
 /* Responsive design adjustments for mobile devices */
-@media (max-width: 768px) { 
-   #navbar {
-       width: 100%; /* Full width on mobile */
-       position: absolute; /* Overlay navigation when modal is open */
-       top: 0; /* Stick to top */
-       left: 0; /* Align to left */
-       z-index: 1000; /* Ensure it is above other content */
-   }
+@media (max-width: 768px) {
+    #myModal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
 
-   #main-doc {
-       margin-left: 0; /* Remove left margin on mobile to utilize full width */ 
-       padding-left: 5%; /* Adjust padding for mobile experience */ 
-       padding-right: 5%; 
-       margin-top: 60px; /* Space below navbar on mobile devices */ 
-   }
+    ##navbar {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hide navbar off-screen by default */
+        height: 100%;
+        width: 250px;
+        overflow-y: auto;
+        transition: left 0.3s ease; /* Smooth transition for sliding */
+    }
 
-   .main-section {
-       margin-bottom: 20px; /* Reduce space between sections on mobile if needed */ 
-   }
+    #navbar.open {
+        left: 0; /* Slide in when open class is added */
+    }
 
-   .nav-link:last-child { 
-       margin-bottom: 0; /* Remove extra space after last menu item */ 
-   }
+    #main-doc {
+        margin-left: 0; /* Remove left margin on mobile */
+        padding-left: 5%;
+        padding-right: 5%;
+        max-width: 100%; /* Full width on mobile */
+    }
 
-   .hamburger-menu { 
-       display:block; /* Show hamburger icon on mobile */ 
-   }
+    .hamburger-menu {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .image {
+        width: 100%; /* Make images responsive to fit screen width */
+        height: auto; /* Maintain aspect ratio */
+    }
 }

@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Hamburger Menu Icon -->
-<div class="hamburger-menu" id="hamburger">
-    &#9776; <!-- This is a Unicode character for the hamburger icon -->
- </div>
- 
- <!-- Modal Structure -->
- <div id="myModal" class="modal">
-    <div class="modal-content">
-       <span class="close">&times;</span>
-       <nav id="navbar">
-          <header>HTML Basic Structure</header>
-          <ol>
-             <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-             <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
+    <div class="hamburger-menu" id="hamburger" aria-label="Open Navigation Menu" role="button" tabindex="0">
+        &#9776; <!-- Unicode character for the hamburger icon -->
+    </div>
+    
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <span class="close" aria-label="Close Navigation">&times;</span>
+            <nav id="navbar">
+                <header id="modal-title">HTML Basic Structure</header>
+                <ol>
+                    <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                    <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
              <li><a href="#html" class="nav-link">html</a></li>
              <li><a href="#head" class="nav-link">head</a></li>
              <li><a href="#body" class="nav-link">body</a></li>
@@ -30,10 +31,11 @@
              <li><a href="#p" class="nav-link">p</a></li>
              <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
              <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
-          </ol>
-       </nav>
+                </ol>
+            </nav>
+        </div>
     </div>
- </div>
+
     <main id="main-doc" role="main">
         <section class="main-section" id="Introduction">
             <header class="section-header">Introduction</header>
