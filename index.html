@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
     <!-- Accessible Hamburger Menu -->
     <button 
         class="hamburger-menu" 
@@ -18,32 +20,70 @@
     >
         &#9776;
     </button>
-    
-    <!-- Navigation Modal -->
-    <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="modal-content">
-            <button 
-                class="close" 
-                aria-label="Close Navigation Menu"
-            >&times;</button>
-            
-            <nav id="navbar">
-                <header id="modal-title">HTML Basic Structure</header>
-                <ol>
-                    <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                    <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
-                    <li><a href="#html" class="nav-link">html</a></li>
-                    <li><a href="#head" class="nav-link">head</a></li>
-                    <li><a href="#body" class="nav-link">body</a></li>
-                    <li><a href="#header" class="nav-link">header</a></li>
-                    <li><a href="#div" class="nav-link">div</a></li>
-                    <li><a href="#p" class="nav-link">p</a></li>
-                    <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
-                    <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
-                </ol>
-            </nav>
+
+
+
+    <!-- Desktop Navigation Sidebar -->
+    <div id="desktop-navbar">
+        <header>Desktop Navigation</header>
+        <ol>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
+            <li><a href="#html" class="nav-link">html</a></li>
+            <li><a href="#head" class="nav-link">head</a></li>
+            <li><a href="#body" class="nav-link">body</a></li>
+            <li><a href="#header" class="nav-link">header</a></li>
+            <li><a href="#div" class="nav-link">div</a></li>
+            <li><a href="#p" class="nav-link">p</a></li>
+            <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
+            <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
+        </ol>
+    </div>
+
+    <!-- Modal for Mobile Navigation -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="mobile-navbar">
+            <button class="close">&times;</button>
+            <header>Mobile Navigation</header>
+            <ol>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
+                <li><a href="#html" class="nav-link">html</a></li>
+                <li><a href="#head" class="nav-link">head</a></li>
+                <li><a href="#body" class="nav-link">body</a></li>
+                <li><a href="#header" class="nav-link">header</a></li>
+                <li><a href="#div" class="nav-link">div</a></li>
+                <li><a href="#p" class="nav-link">p</a></li>
+                <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
+                <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
+            </ol>
         </div>
     </div>
+
+
+
+<!-- Disfunctional navbar
+    Navigation Modal
+<div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+        <button class="close" aria-label="Close Navigation Menu">&times;</button>
+        <nav id="navbar">
+            <header id="modal-title">HTML Basic Structure</header>
+            <ol>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#!DOCTYPE" class="nav-link">!DOCTYPE</a></li>
+                <li><a href="#html" class="nav-link">html</a></li>
+                <li><a href="#head" class="nav-link">head</a></li>
+                <li><a href="#body" class="nav-link">body</a></li>
+                <li><a href="#header" class="nav-link">header</a></li>
+                <li><a href="#div" class="nav-link">div</a></li>
+                <li><a href="#p" class="nav-link">p</a></li>
+                <li><a href="#Final_Thoughts" class="nav-link">Final Thoughts</a></li>
+                <li><a href="#Further_Reference" class="nav-link">Further Reference</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>  --!>
 
     <main id="main-doc" role="main">
         <!-- Your existing section content remains the same -->
